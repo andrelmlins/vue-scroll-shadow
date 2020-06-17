@@ -10,7 +10,6 @@
       class="subcontainer"
       :style="styleSubcontainer"
     >
-      <!-- {{ scroll }} -->
       <slot />
     </div>
   </div>
@@ -40,15 +39,20 @@ export default {
   props: {
     styleContainer: { type: String, default: '' },
     styleSubcontainer: { type: String, default: '' },
+    // Scroll color
     scrollColor: { type: String, default: '#c5c5c5' },
+    // Left scroll padding
     scrollPadding: { type: String, default: '0px' },
+    // Scroll Width
     scrollWidth: { type: String, default: '8px' },
+    // Scroll color when hover
     scrollColorHover: { type: String, default: '#a6a6a6' },
     shadow: {
       type: String,
       default:
         '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset'
     },
+    // Verify shadow is visible
     isShadow: { type: Boolean, default: true }
   },
   mounted() {

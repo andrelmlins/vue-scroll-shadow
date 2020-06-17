@@ -49,7 +49,7 @@ const app = {
 
 const library = [
   {
-    input: 'src/index.js',
+    input: 'src/ScrollShadow.vue',
     plugins: [
       vue(),
       babel({ exclude: 'node_modules/**' }),
@@ -58,7 +58,7 @@ const library = [
     ],
     output: {
       exports: 'named',
-      name: 'VueGridResponsive',
+      name: 'VueScrollShadow',
       file: pkg.unpkg,
       format: 'iife',
       sourcemap: true
@@ -68,7 +68,7 @@ const library = [
     }
   },
   {
-    input: './src/index.js',
+    input: './src/ScrollShadow.vue',
     plugins: [
       vue(),
       babel({ exclude: 'node_modules/**' }),
@@ -83,7 +83,7 @@ const library = [
     }
   },
   {
-    input: './src/index.js',
+    input: './src/ScrollShadow.vue',
     plugins: [
       vue(),
       babel({ exclude: 'node_modules/**' }),

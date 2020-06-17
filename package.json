@@ -1,14 +1,25 @@
 {
   "name": "vue-scroll-shadow",
   "version": "0.1.0",
-  "main": "index.js",
-  "author": "André Lins",
+  "main": "dist/vue-scroll-shadow.umd.js",
+  "module": "dist/vue-scroll-shadow.esm.js",
+  "unpkg": "dist/vue-scroll-shadow.min.js",
+  "homepage": "https://vue-scroll-shadow.netlify.com/",
+  "repository": "https://github.com/andrelmlins/vue-scroll-shadow",
+  "author": "André Lins <andrelucas01@hotmail.com> (https://andrelmlins.github.io/)",
   "license": "MIT",
   "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public"
+  },
+  "bugs": {
+    "url": "https://github.com/andrelmlins/vue-scroll-shadow/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -29,5 +40,10 @@
   },
   "dependencies": {
     "resize-observer-polyfill": "^1.5.1"
-  }
+  },
+  "keywords": [
+    "vue",
+    "scroll",
+    "shadow"
+  ]
 }
