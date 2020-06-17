@@ -1,6 +1,11 @@
 <template>
-  <div aria-label="container-scroll">
-    <div ref="component">
+  <div :style="styleGeneral" aria-label="container-scroll">
+    <div
+      aria-label="subcontainer-scroll"
+      ref="component"
+      class="subcontainer"
+      :style="styleSubcontainer"
+    >
       <slot />
     </div>
   </div>
@@ -12,15 +17,23 @@ import ResizeObserver from 'resize-observer-polyfill';
 export default {
   name: 'ScrollShadow',
   data() {
+    let styleGeneral = this.styleContainer;
+    styleGeneral += `--scrollColor:${this.scrollColor};`;
+    styleGeneral += `--shadow:${this.shadow};`;
+    styleGeneral += `--scrollPadding:${this.scrollPadding};`;
+    styleGeneral += `--scrollWidth:${this.scrollWidth};`;
+    styleGeneral += `--scrollColorHover:${this.scrollColorHover}`;
+
     return {
       scroll: false,
       component: null,
-      RO: null
+      RO: null,
+      styleGeneral
     };
   },
   props: {
-    styleContainer: String,
-    styleSubcontainer: String,
+    styleContainer: { type: String, default: '' },
+    styleSubcontainer: { type: String, default: '' },
     scrollColor: { type: String, default: '#c5c5c5' },
     scrollPadding: { type: String, default: '0px' },
     scrollWidth: { type: String, default: '8px' },
