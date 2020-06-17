@@ -24,7 +24,8 @@ const app = {
       css: false,
       style: {
         postcssPlugins: [autoprefixer]
-      }
+      },
+      needMap: false
     }),
     css({
       entry: 'docs/main.js',

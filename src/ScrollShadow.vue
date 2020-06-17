@@ -1,11 +1,16 @@
 <template>
-  <div :style="styleGeneral" aria-label="container-scroll">
+  <div
+    :style="styleGeneral"
+    aria-label="container-scroll"
+    :class="`container ${this.scroll ? 'containerScroll' : ''}`"
+  >
     <div
       aria-label="subcontainer-scroll"
       ref="component"
       class="subcontainer"
       :style="styleSubcontainer"
     >
+      <!-- {{ scroll }} -->
       <slot />
     </div>
   </div>
@@ -19,7 +24,7 @@ export default {
   data() {
     let styleGeneral = this.styleContainer;
     styleGeneral += `--scrollColor:${this.scrollColor};`;
-    styleGeneral += `--shadow:${this.shadow};`;
+    styleGeneral += `--shadow:${this.isShadow ? this.shadow : ''};`;
     styleGeneral += `--scrollPadding:${this.scrollPadding};`;
     styleGeneral += `--scrollWidth:${this.scrollWidth};`;
     styleGeneral += `--scrollColorHover:${this.scrollColorHover}`;
@@ -28,7 +33,8 @@ export default {
       scroll: false,
       component: null,
       RO: null,
-      styleGeneral
+      styleGeneral,
+      classGeneral: 'container'
     };
   },
   props: {
@@ -43,16 +49,16 @@ export default {
       default:
         '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset'
     },
-    isShadow: { type: Boolean, default: false }
+    isShadow: { type: Boolean, default: true }
   },
   mounted() {
     const refComponent = this.$refs.component;
 
     const RO = new ResizeObserver(() => {
       if (refComponent.clientHeight < refComponent.scrollHeight) {
-        scroll = true;
+        this.scroll = true;
       } else {
-        scroll = false;
+        this.scroll = false;
       }
     });
 
