@@ -1,6 +1,6 @@
 # Vue Scroll Shadow
 
-[![npm version](https://badge.fury.io/js/vue-scroll-shadow.svg)](https://www.npmjs.com/package/vue-scroll-shadow) &bull; [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/andrelmlins/vue-scroll-shadow/blob/master/LICENSE) &bull; [![Build Status](https://travis-ci.com/andrelmlins/vue-scroll-shadow.svg?branch=master)](https://travis-ci.com/andrelmlins/vue-scroll-shadow) &bull; [![Dependencies](https://david-dm.org/andrelmlins/vue-scroll-shadow.svg)](https://david-dm.org/andrelmlins/vue-scroll-shadow)
+[![npm version](https://badge.fury.io/js/vue-scroll-shadow.svg)](https://www.npmjs.com/package/vue-scroll-shadow) &bull; [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/andrelmlins/vue-scroll-shadow/blob/master/LICENSE) &bull; [![Build Status](https://travis-ci.com/andrelmlins/vue-scroll-shadow.svg?branch=master)](https://travis-ci.com/andrelmlins/vue-scroll-shadow)
 
 Component that customizes the scroll and inserts shadow when scrolling exists
 

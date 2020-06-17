@@ -1,5 +1,6 @@
 {
   "name": "vue-scroll-shadow",
+  "description": "Component that customizes the scroll and inserts shadow when scrolling exists",
   "version": "0.1.0",
   "main": "dist/vue-scroll-shadow.umd.js",
   "module": "dist/vue-scroll-shadow.esm.js",
