@@ -4,7 +4,4 @@ import App from './App.vue';
 
 Vue.component('scroll-shadow', ScrollShadow);
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-});
+new Vue({ el: '#app', render: h => h(App) });

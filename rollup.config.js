@@ -22,15 +22,10 @@ const app = {
   plugins: [
     vue({
       css: false,
-      style: {
-        postcssPlugins: [autoprefixer]
-      },
+      style: { postcssPlugins: [autoprefixer] },
       needMap: false
     }),
-    css({
-      entry: 'docs/main.js',
-      dest: 'public/build/bundle.css'
-    }),
+    css({ entry: 'docs/main.js', dest: 'public/build/bundle.css' }),
     babel({ exclude: 'node_modules/**' }),
     resolve({ mainFields: ['module', 'jsnext', 'main', 'browser'] }),
     commonjs(),
@@ -42,9 +37,7 @@ const app = {
       'process.env.VUE_ENV': JSON.stringify('browser')
     })
   ],
-  watch: {
-    clearScreen: false
-  }
+  watch: { clearScreen: false }
 };
 
 const library = [
@@ -63,9 +56,7 @@ const library = [
       format: 'iife',
       sourcemap: true
     },
-    watch: {
-      include: 'src/**'
-    }
+    watch: { include: 'src/**' }
   },
   {
     input: './src/ScrollShadow.vue',
