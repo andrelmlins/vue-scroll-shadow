@@ -7,6 +7,7 @@
     </h4>
     <div class="row">
       <div class="card">
+        <h5>With VueScrollShadow</h5>
         <scroll-shadow>
           <ul>
             <li v-for="car in cars" :key="car">{{ car }}</li>
@@ -14,6 +15,7 @@
         </scroll-shadow>
       </div>
       <div class="card">
+        <h5>Without VueScrollShadow</h5>
         <ul style="overflow-y:scroll">
           <li v-for="car in cars" :key="car">{{ car }}</li>
         </ul>
@@ -46,9 +48,18 @@ h1 {
   color: white;
   margin-bottom: 0px;
   font-size: 40pt;
+  text-align: center;
 }
 h4 {
   color: white;
+  text-align: center;
+}
+h5 {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0px;
+  text-align: center;
 }
 .card {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
@@ -79,5 +90,15 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 25px;
+}
+@media screen and (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+  .card {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
 }
 </style>
