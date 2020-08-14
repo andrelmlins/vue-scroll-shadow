@@ -80,7 +80,7 @@ Local demo:
 ```
 git clone https://github.com/andrelmlins/vue-scroll-shadow.git
 cd vue-scroll-shadow
-npm install && npm run start
+npm install && npm run dev
 ```
 
 ## NPM Statistics
